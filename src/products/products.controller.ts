@@ -28,7 +28,7 @@ export class ProductsController {
   }
 
   // @Patch(':id')
-  @MessagePattern({ cmd: 'update-product' })
+  @MessagePattern({ cmd: 'update_product' })
   update(
     // @Param('id', ParseIntPipe) id: number,
     // @Body() updateProductDto: UpdateProductDto,
@@ -38,7 +38,7 @@ export class ProductsController {
   }
 
   // @Delete(':id')
-  @MessagePattern({ cmd: 'delete-product' })
+  @MessagePattern({ cmd: 'delete_product' })
   remove(@Payload('id', ParseIntPipe) id: number) {
     return this.productsService.remove(id);
   }
