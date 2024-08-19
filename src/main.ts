@@ -24,6 +24,7 @@ async function bootstrap() {
     }),
   );
 
+  console.log('Hola mundo - segundo cambio');
   await app.listen();
   logger.log(`Products Microservice is running on port:${envs.port}`);
 }
